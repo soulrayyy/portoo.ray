@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rayhan Alviandi | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Space Grotesk', 'monospace'],
+              display: ['Syne', 'sans-serif'],
+            },
+            colors: {
+              background: '#F2F2F2', // Soft Grey/White
+              surface: '#FFFFFF',
+              primary: '#111111', // Sharp Black
+              secondary: '#555555', // Readable Grey
+              accent: '#FF3300', // International Orange (Vibrant)
+              line: '#E5E5E5',
+            },
+            animation: {
+              'marquee': 'marquee 30s linear infinite',
+              'marquee-reverse': 'marquee-reverse 30s linear infinite',
+              'spin-slow': 'spin 15s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              'marquee-reverse': {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(0%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        cursor: none; /* Custom cursor enabled */
+        background-color: #F2F2F2;
+        color: #111111;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Hide scrollbar */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      
+      /* Mobile Cursor Reset */
+      @media (hover: none) {
+        body {
+          cursor: auto;
+        }
+        .custom-cursor {
+          display: none !important;
+        }
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
+  <body class="antialiased selection:bg-accent selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
